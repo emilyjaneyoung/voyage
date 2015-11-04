@@ -5,3 +5,126 @@
 // =========================================================================
 // Forms
 // =========================================================================
+
+.theme-form {
+	overflow: hidden;
+	@include rem(margin-top, 2rem);
+}
+
+.theme-form label {
+	width: 24%;
+	float: left;
+    @include rem(padding-top, 1rem);
+    padding-right: 5%;
+    @include rem(font-size, 1.6rem);
+    color: $color__neutral;
+	@include rem(margin-bottom, .5rem);
+    @include breakpoint(small) {
+        width: 100%;
+    }
+}
+
+.theme-form input {
+	width: 55%;
+	@include rem(height, 4.2rem);
+	@include rem(margin-bottom, 2rem);
+	@include rem(padding, 0 1rem);
+	vertical-align: middle;
+	cursor: pointer;
+    color: $color__primary;
+	background-color: $white;
+	border: 1px solid $color__neutral;
+	@include state() {
+		outline: 0;
+	}
+	@include breakpoint(small) {
+		width: 100%;
+	}
+}
+
+.ie8 .theme-form input {
+	@include rem(line-height, 4.2rem);
+}
+
+.theme-form textarea {
+	width: 70%;
+	@include rem(height, 17.5rem);
+	@include rem(margin-bottom, 2rem);
+	padding: 3%;
+	cursor: pointer;
+	resize: vertical;
+	font-weight: 500;
+	color: $color__primary;
+	background-color: $white;
+	border: 1px solid $color__neutral;
+	@include state() {
+		outline: 0;
+	}
+	@include breakpoint(small) {
+		width: 100%;
+	}
+}
+
+.theme-form input, .theme-form textarea {
+	@include state() {
+		border-color: $color__primary;
+	}
+}
+
+.theme-form .submit {
+	width: auto;
+	line-height: 2.5;
+    margin-left: 24%;
+	padding: .3em 2em;
+	border: 0;
+    color: $white;
+	background-color: $color__primary;
+	@include state() {
+		border: 0;
+		outline: none;
+		background-color: $color__secondary;
+	}
+    @include breakpoint(small) {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+// ==================================
+// Notifications
+// ==================================
+
+.theme-form .error {
+	border-color: $danger;
+}
+
+.theme-form .error--message {
+    @include rem(margin-bottom, 2rem);
+    padding: 2%;
+	color: $white;
+	background-color: $danger;
+    border: 5px solid darken($danger, 10%);
+	p {
+		color: $white;
+		@include rem(font-size, 1.8rem);
+	}
+	ul li:before {
+		color: $white;
+	}
+}
+
+.theme-form .form-title {
+    @include rem(margin-bottom, 2rem);
+    @include rem(font-size, 2.4rem);
+    color: $color__neutral;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.theme-form .form-message {
+    @include rem(margin-bottom, 2rem);
+    @include rem(font-size, 1.8rem);
+    color: $color__primary;
+    text-transform: none;
+    font-weight: 400;
+}
