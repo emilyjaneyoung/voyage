@@ -5,3 +5,56 @@
 // =========================================================================
 // Tables
 // =========================================================================
+
+.main-content table {
+    table-layout: fixed;
+    width: 100%;
+    @include rem(margin-bottom, 3rem);
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    tr {
+        background: $white;
+        td {
+            border: 0;
+            @include rem(padding, 1rem 2rem);
+            font-weight: normal;
+            border: 0;
+            color: $color__primary;
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+    tbody tr:nth-child(even) {
+        background: $color__neutral;
+    }
+    tbody tr {
+        @include transition(all, 0.125s, linear);
+        @include state() {
+            background: $color__primary;
+            td {
+                color: $white;
+            }
+            a {
+                color: $white;
+            }
+        }
+    }
+    thead tr {
+        background: $color__primary;
+        th, td {
+            @include rem(padding, 1rem 2rem);
+            color: $white;
+            @include rem(font-size, 1.6rem);
+        }
+    }
+    tfoot tr {
+        background: $color__primary;
+        th, td {
+            @include rem(padding, 1rem 2rem);
+            color: $white;
+            @include rem(font-size, 1.6rem);
+        }
+    }
+}
