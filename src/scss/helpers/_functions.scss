@@ -1,3 +1,60 @@
 // =========================================================================
 // Functions
 // =========================================================================
+
+// =========================================================================
+// PX - REM
+// =========================================================================
+
+/*
+    When using this function:
+    Do : @include rem(margin-bottom, 2rem);
+    Don't : @include rem(margin-bottom, 0rem);
+    Don't cause unnessasary conversions as this is bad practice.
+    It will also break future builds
+*/
+
+@function parseInt($n) {
+	@return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+	$px : ();
+	$rem: ();
+
+	@each $value in $values {
+
+		@if $value == 0 or $value == auto {
+			$px : append($px , $value);
+			$rem: append($rem, $value);
+		}
+
+		@else {
+			$unit: unit($value);
+			$val: parseInt($value);
+
+			@if $unit == "px" {
+				$px : append($px,  $value);
+				$rem: append($rem, ($val / 10 + rem));
+			}
+
+			@if $unit == "rem" {
+				$px : append($px,  ($val * 10 + px));
+				$rem: append($rem, $value);
+			}
+		}
+	}
+
+	@if $px == $rem {
+		#{$property}: $px;
+	} @else {
+		#{$property}: $px;
+		#{$property}: $rem;
+	}
+}
+
+// =========================================================================
+// Grid
+// =========================================================================
+
+

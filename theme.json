@@ -1,0 +1,8 @@
+{
+  "name": "Voyage",
+  "uri": "https://github.com/emilyjaneyoung/voyage",
+  "version": "1.0.0",
+  "author": "Emily Young",
+  "description" : "Voyage Gulp Tasks",
+  "license" : "MIT"
+}

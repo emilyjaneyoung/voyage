@@ -1,0 +1,30 @@
+// =========================================================================
+// Spacers
+// =========================================================================
+
+.spacer {
+
+	margin-bottom: 3%;
+
+	&--small {
+		margin-bottom: 1%;
+	}
+
+	&--double {
+		margin-top: 3%;
+		margin-bottom: 3%;
+	}
+
+	&--large {
+		margin-bottom: 6%;
+	}
+
+	&--padded-top {
+		padding-top: 3%;
+	}
+
+	&--padded-bottom {
+		padding-bottom: 3%;
+	}
+
+}

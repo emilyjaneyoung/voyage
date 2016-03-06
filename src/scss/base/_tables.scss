@@ -1,60 +1,53 @@
 // =========================================================================
-// Modules - Reusable Modular Parts
-// =========================================================================
-
-// =========================================================================
 // Tables
 // =========================================================================
 
 .main-content table {
+
     table-layout: fixed;
-    width: 100%;
-    @include rem(margin-bottom, 3rem);
     border-collapse: collapse;
     border-spacing: 0;
-    border: 0;
-    tr {
+
+    @include breakpoint(767) {
+        table-layout: auto;
+    }
+
+    thead th,
+    thead tr,
+    thead td,
+    tfoot tr,
+    tfoot td,
+    tfoot th {
         background: $white;
+        color: $black;
+        border: 0;
+    }
+
+    thead tr {
+    	border: 1px solid $black;
+    }
+
+    tbody tr {
+
+        border: 1px solid $black;
+        @include transition(all, 0.125s, linear);
+
         td {
             border: 0;
-            @include rem(padding, 1rem 2rem);
-            font-weight: normal;
-            border: 0;
-            color: $color__primary;
-            a {
-                text-decoration: underline;
-            }
         }
+
     }
-    tbody tr:nth-child(even) {
-        background: $color__neutral;
-    }
-    tbody tr {
-        @include transition(all, 0.125s, linear);
+
+    a {
+        color: $black;
+        text-decoration: underline;
         @include state() {
-            background: $color__primary;
-            td {
-                color: $white;
-            }
-            a {
-                color: $white;
-            }
+            text-decoration: none;
         }
     }
-    thead tr {
-        background: $color__primary;
-        th, td {
-            @include rem(padding, 1rem 2rem);
-            color: $white;
-            @include rem(font-size, 1.6rem);
-        }
+
+    tr:nth-child(2n+2) {
+        background: darken($white, 50%);
     }
-    tfoot tr {
-        background: $color__primary;
-        th, td {
-            @include rem(padding, 1rem 2rem);
-            color: $white;
-            @include rem(font-size, 1.6rem);
-        }
-    }
+
 }

@@ -6,33 +6,42 @@
 // Colours
 // =========================================================================
 
-$white: #FDFDFD;
-$black: #333;
-
-// Neutral tones - Shades of Gray
-//$color__neutral--xxxxdark: #;
-//$color__neutral--xxxdark: #;
-//$color__neutral--xxdark: #;
-//$color__neutral--xdark: #;
-//$color__neutral--dark: #;
-//$color__neutral--xxxxmid: #;
-//$color__neutral--xxxmid: #;
-//$color__neutral--xxmid: #;
-//$color__neutral--xmid: #;
-//$color__neutral--mid: #;
-//$color__neutral--light: #;
-//$color__neutral--xxlight: #;
-//$color__neutral--xxxlight: #;
+$white: #FFF;
+$black: #000;
 
 // Colour
-//$color__primary: #;
+$color__primary: #000;
 
 // Colour
-//$color__secondary: #;
+$color__secondary: #000;
+
+// Colour
+$color__tertiary: #000;
+
+// Danger
+$color__danger: #EF0B2E;
+
+// Warning
+$color__warning: #FFB300;
+
+// Success
+$color__success: #87C80A;
+
+// =========================================================================
+// Vars
+// =========================================================================
+
+$radius: 2px;
 
 // =========================================================================
 // Typeface Rules
 // =========================================================================
 
-$baseFont: Georgia, Times, "Times New Roman", serif;
-$titleFont: "Trebuchet MS", Arial, sans-serif;
+$baseFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$titleFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// =========================================================================
+// Font Face
+// =========================================================================
+
+

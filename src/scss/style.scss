@@ -11,17 +11,18 @@
 @import "helpers/media";
 @import "helpers/variables";
 @import "helpers/mixins";
+@import "helpers/helper";
+@import "helpers/animations";
 
 // =========================================================================
 // Base - Defaults and Content
 // =========================================================================
 
 @import "base/base";
-@import "base/helper";
 @import "base/typography";
 @import "base/forms";
 @import "base/tables";
-@import "base/spacers";
+@import "base/theme";
 
 // =========================================================================
 // Layout - Sections of Page
@@ -42,8 +43,10 @@
 @import "state/state";
 
 // =========================================================================
-// Theme - Specific Specific Theme Styling (Not always needed)
+// Theme - Specific Theme Styling
 // =========================================================================
+
+@import "theme/spacers";
 
 // =========================================================================
 // Important - Cascade Dependant Code

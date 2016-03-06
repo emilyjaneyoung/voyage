@@ -1,0 +1,196 @@
+// =========================================================================
+// Theme - Specific Theme
+// =========================================================================
+
+// =========================================================================
+// Gallery - WordPress
+// =========================================================================
+
+.gallery .gallery-item {
+    position: relative;
+    float: left;
+    text-align: center;
+    width: 33%;
+}
+
+.gallery .gallery-item img {
+    width: 90%;
+    height: auto;
+}
+
+.gallery-columns-2 .gallery-item { width: 50%; }
+.gallery-columns-4 .gallery-item { width: 25%; }
+
+.gallery-columns-2 .attachment-medium {
+    max-width: 92%;
+    height: auto;
+}
+
+.gallery-columns-4 .attachment-thumbnail {
+    max-width: 84%;
+    height: auto;
+}
+
+.gallery .gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    display: block;
+    color: $white;
+    background-color: $black;
+}
+
+.gallery dl, .gallery dt {
+    margin: 0;
+}
+
+.gallery br+br {
+    display: none;
+}
+
+// =========================================================================
+// Imagery - WordPress
+// =========================================================================
+
+.alignleft,
+img.alignleft {
+    display: inline;
+    float: left;
+    @include rem(margin, 0 2rem 0 0);
+    @include rem(padding, 0 0 2rem 0);
+}
+
+.alignright,
+img.alignright {
+    display: inline;
+    float: right;
+    @include rem(margin, 0 0 0 2rem);
+    @include rem(padding, 0 0 2rem 0);
+}
+
+.aligncenter,
+img.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @include rem(padding, 0 0 2rem 0);
+}
+
+.wp-caption {
+
+}
+
+.wp-caption-text {
+
+}
+
+// =========================================================================
+// Typography
+// =========================================================================
+
+.main-content h1 {
+
+}
+
+.main-content h2 {
+
+}
+
+.main-content h3 {
+
+}
+
+.main-content h4 {
+
+}
+
+.main-content h5 {
+
+}
+
+.main-content h6 {
+
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+    color: $black;
+}
+
+.main-content ul {
+
+	padding: 0;
+
+    ul {
+
+    }
+
+    li {
+        list-style-type: disc;
+    }
+
+}
+
+.main-content ol {
+
+	padding: 0;
+
+    ol {
+
+    }
+
+    li {
+        list-style-type: decimal;
+    }
+
+}
+
+.main-content p {
+
+}
+
+.main-content blockquote {
+
+}
+
+// =========================================================================
+// Images & Captions
+// =========================================================================
+
+.main-content img {
+
+}
+
+
+
+// ==================================
+// Generic
+// ==================================
+
+.main-content hr,
+.seperator {
+    width: 100%;
+    height: 1px;
+    display: block;
+    @extend %clearfix;
+    border: 0;
+}
+
+.main-content a {
+    color: $black;
+    text-decoration: underline;
+    @include state() {
+        text-decoration: none;
+    }
+}
+
+.main-content iframe {
+    width: 100%;
+    border: 0;
+}

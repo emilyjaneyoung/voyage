@@ -3,290 +3,61 @@
 // =========================================================================
 
 *, *:before, *:after {
-    @extend %box-sizing;
+	@include box-sizing(border-box);
 }
 
 html {
-    font-size: 62.5%; // Used for REM so please don't delete
-    height: 100%;
+	font-size: 62.5%;
+	overflow-x: hidden;
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
-    font-family: $baseFont;
-    font-size: 1.4em;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    display: table;
-    width: 100%;
-    height: 100%;
-    color: $color__primary;
-    background: $color__neutral;
+	font-family: $baseFont;
+	font-size: 1.6em;
+	line-height: 1.5;
+	font-weight: 300;
+	font-smoothing: antialiased;
 }
 
-.page-row {
-    display: table-row;
-    height: 1px;
-}
-
-.page-row-expanded {
-    height: 100%;
-}
-
-address {
-    font-style: normal;
+img {
+	max-width: 100%;
+    height: auto;
 }
 
 a {
-    text-decoration: none;
-    @include transition(all, 0.125s, linear);
-    @include breakpoint(small) {
-        @include no-transition(0);
-    }
+	text-decoration: none;
+	@include transition(all, 0.125s, linear);
+	@include breakpoint(small) {
+		@include no-transition(0);
+	}
 }
 
-a:hover, a:active { outline: none; }
+a:visited {
+	color: darken($white, 10%);
+}
+
+a:hover {
+	outline: none;
+}
+
+a:active {
+	outline: none;
+}
 
 a[href^=tel] {
-    text-decoration: inherit;
-    color: inherit;
+	text-decoration: inherit;
+	color: inherit;
 }
 
 ::selection {
-    color: $white;
-    background: $color__primary;
+	color: $white;
+	background: $black;
 }
 
 ::-moz-selection {
-    color: $white;
-    background: $color__primary;
-}
-
-// =========================================================================
-// Theme - Specific Theme
-// =========================================================================
-
-// ===================================
-// Spacers
-// ===================================
-
-.spacer {
-    @include rem(margin-bottom, 3rem);
-}
-
-.spacer--large {
-
-}
-
-.spacer--huge {
-
-}
-
-.spacer--small {
-    @include rem(margin-bottom, 2rem);
-}
-
-.spacer--tiny {
-    @include rem(margin-bottom, 1rem);
-}
-
-// =========================================================================
-// WP Core Styling
-// =========================================================================
-
-// ==================================
-// Gallery
-// ==================================
-
-.gallery {
-    margin: 0 auto;
-    @include rem(margin-bottom, 3rem);
-    @extend %clearfix;
-}
-
-.gallery .gallery-item {
-    position: relative;
-    float: left;
-    text-align: center;
-    width: 33%;
-}
-
-.gallery .gallery-item img {
-    width: 90%;
-    height: auto;
-}
-
-.gallery-columns-2 .gallery-item { width: 50%; }
-.gallery-columns-4 .gallery-item { width: 25%; }
-
-.gallery-columns-2 .attachment-medium {
-    max-width: 92%;
-    height: auto;
-}
-
-.gallery-columns-4 .attachment-thumbnail {
-    max-width: 84%;
-    height: auto;
-}
-
-.gallery .gallery-caption {
-    position: absolute;
-    @include rem(bottom, 2rem);
-    left: 0;
-    margin: 0;
-    display: block;
-    @include rem(padding, .5rem);
-    color: $white;
-    @include rgba(background-color, $color__primary, 0.8, $color__primary);
-}
-
-.gallery dl, .gallery dt { margin: 0; }
-.gallery br+br { display: none; }
-
-// ==================================
-// Imagery
-// ==================================
-
-.alignleft,
-img.alignleft {
-    display: inline;
-    float: left;
-    @include rem(margin-right, 2rem);
-    @include rem(padding, 2rem 0);
-}
-
-.alignright,
-img.alignright {
-    display: inline;
-    float: right;
-    @include rem(margin-left, 2rem);
-    @include rem(padding, 2rem 0);
-}
-
-.aligncenter,
-img.aligncenter {
-    clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @include rem(padding, 2rem 0);
-}
-
-// ===================================
-// Typography
-// ===================================
-
-hr.seperator {
-	width: 100%;
-	@include rem(height, .1rem);
-	@include rem(margin, 3rem 0);
-	border: 0;
-	overflow: hidden;
-  	border-bottom: 1px solid $color__neutral;
-}
-
-.main-content h1 { @include rem(font-size, 3.2rem); }
-.main-content h2 { @include rem(font-size, 2.4rem); }
-.main-content h3 { @include rem(font-size, 1.8rem); }
-.main-content h4 { @include rem(font-size, 1.6rem); }
-.main-content h5 { @include rem(font-size, 1.4rem); }
-.main-content h6 { @include rem(font-size, 1.3rem); }
-
-.main-content h1,
-.main-content h2,
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6 {
-    @include rem(margin, 0 0 2rem 0);
-    color: $color__secondary;
-}
-
-.main-content ul {
-	@include rem(margin, 0 0 3rem 3rem);
-	ul {
-		@include rem(padding, 0 0 0 1rem);
-	}
-	list-style-type: disc;
-}
-
-.main-content ol {
-	@include rem(margin, 0 0 0 3rem);
-	ol {
-		@include rem(padding, 0 0 0 1rem);
-	}
-	li {
-		list-style-type: decimal;
-	}
-}
-
-.main-content p {
-	@include rem(margin, 0 0 3rem 0);
-}
-
-.intro-content {
-    @include rem(margin, 0 0 1rem 0);
-    font-weight: 500;
-    @include rem(font-size, 1.8rem);
-}
-
-.intro-img {
-    max-width: 100%;
-    @include rem(margin, 0 0 3rem 0);
-}
-
-.main-content blockquote {
-	@include rem(margin, 3rem 0);
-	@include rem(padding, 0 0 0 3rem);
-	border-left: 7px solid $color__primary;
-}
-
-// ==================================
-// Images & Captions
-// ==================================
-
-.main-content img {
-    max-width: 100%;
-    display: block;
-    @include rem(padding-bottom, 2rem);
-}
-
-.wp-caption {
-    position: relative;
-}
-
-    p.wp-caption-text {
-        position: absolute;
-        @include rem(bottom, 4rem);
-        left: 0;
-        margin: 0;
-        @include rem(padding, 1rem);
-        color: $white;
-        @include rgba(background-color, $color__primary, 0.8, $color__primary);
-    }
-
-// ==================================
-// Generic
-// ==================================
-
-.main-content hr {
-    width: 100%;
-    @include rem(height, .1rem);
-    @include rem(margin, 2rem 0);
-    display: block;
-    @extend %clearfix;
-    clear: both;
-    border: 0;
-    background-color: $color__neutral;
-}
-
-.main-content a {
-    color: $color__primary;
-    text-decoration: underline;
-    @include state() {
-        text-decoration: none;
-    }
-}
-
-.main-content iframe {
-    width: 100%;
+	color: $white;
+	background: $black;
 }

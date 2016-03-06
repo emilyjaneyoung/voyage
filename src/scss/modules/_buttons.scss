@@ -1,7 +1,45 @@
 // =========================================================================
-// Modules - Reusable Modular Parts
-// =========================================================================
-
-// =========================================================================
 // Buttons
 // =========================================================================
+
+.btn {
+
+	color: $white;
+	cursor: pointer;
+	display: block;
+	font-weight: 400;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	vertical-align: middle;
+	width: 100%;
+	background: transparent;
+	font-family: $titleFont;
+	border: none;
+	text-align: center;
+    text-decoration: none;
+    @include transition(all, 0.125s, linear);
+
+	@include state() {
+		color: $white;
+	}
+
+	&--dark {
+		color: $color__secondary;
+	}
+
+	&--brand {
+		color: $color__primary;
+	}
+
+	&--light {
+		color: $white;
+	}
+
+	&--submit {
+		color: $white;
+		background-color: $black;
+		@include transition(all, 0.125s, linear);
+	}
+
+}

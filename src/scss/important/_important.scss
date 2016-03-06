@@ -1,3 +1,51 @@
 // =========================================================================
 // Important - Cascade Dependant Code
 // =========================================================================
+
+/* Text meant only for screen readers */
+.says,
+.screen-reader-response,
+.screen-reader-text {
+	@include hide-visually();
+}
+
+/* must have higher specificity than alternative color schemes inline styles */
+.site .skip-link {
+	background-color: #f1f1f1;
+	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	left: -9999em;
+	outline: none;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	text-transform: none;
+	top: -9999em;
+}
+
+.site .skip-link:focus {
+	clip: auto;
+	height: auto;
+	left: 6px;
+	top: 7px;
+	width: auto;
+	z-index: 100000;
+}
+
+.ie-message {
+
+	display: block;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+	color: $white;
+	background-color: $black;
+
+	a {
+		text-decoration: underline;
+		color: $white;
+	}
+
+}
