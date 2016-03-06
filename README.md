@@ -33,6 +33,7 @@ Use `npm rebuild node-sass` if updated.
 ## Running Gulp
 
 Run 'gulp'
+Run 'gulp sprites' to create the SVG spritesheet and PNG fallbacks.
 
 ## EditorConfig
 
