@@ -39,6 +39,8 @@ Run 'gulp'
 EditorConfig helps to maintain consistent coding styles between different editors
 Install `EditorConfig` with [Package Control](https://sublime.wbond.net) and restart Sublime.
 
+## License
+
 [MIT](http://opensource.org/licenses/MIT)
 
 # Roadmap ✈
