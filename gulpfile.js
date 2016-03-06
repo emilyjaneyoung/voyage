@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    xo = require('gulp-xo'),
+    jshint = require('gulp-jshint'),
     prefix = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
@@ -10,6 +10,8 @@ var gulp = require('gulp'),
     header = require('gulp-header'),
     gutil = require('gulp-util'),
     sourcemaps = require('gulp-sourcemaps'),
+    svg2png    = require('gulp-svg2png'),
+    svgSymbols = require('gulp-svg-symbols'),
 
     paths = {
         scripts: [
@@ -18,6 +20,9 @@ var gulp = require('gulp'),
         ],
         images: [
             'img/*'
+        ],
+        icons: [
+            'img/icons/**/*.svg'
         ],
         sass: [
             'src/scss/*.scss',
@@ -45,13 +50,17 @@ var gulp = require('gulp'),
             '',
         ].join('\n');
 
-// Error handling
+/**
+ * Error handling
+ */
 onError = function (err) {
     gutil.beep();
     console.log(err);
 };
 
-// Sass
+/**
+ * Sass
+ */
 gulp.task('sass', function(){
     return gulp.src(paths.sass)
         .pipe(sourcemaps.init())
@@ -69,30 +78,62 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./'))
 });
 
-// JavaScript
+/**
+ * JavaScript
+ */
 gulp.task('js', function () {
     return gulp.src(paths.scripts)
-        .pipe(xo())
+        .pipe(jshint())
         .pipe(plumber({ errorHandler: onError }))
         .pipe(uglify({mangle: true}))
         .pipe(concat('base.min.js'))
         .pipe(gulp.dest('js'));
 });
 
-// Image Minify
+/**
+ * Image Minify
+ */
 gulp.task('img', function () {
     return gulp.src(paths.images)
         .pipe(imagemin({ progressive: true, }))
         .pipe(gulp.dest('img'))
 });
 
-// Watch Files
+/**
+ * SVG PNG fallback task
+ */
+gulp.task('svg2png', function () {
+    return gulp.src(paths.icons)
+    .pipe(plumber({ errorHandler: onError }))
+        .pipe(svg2png())
+        .pipe(gulp.dest('img/icons/'))
+});
+
+/**
+ * Sprites task
+ */
+gulp.task('sprites', ['svg2png'], function () {
+    return gulp.src(paths.icons)
+    .pipe(plumber({ errorHandler: onError }))
+        .pipe(
+            svgSymbols({
+                title: false,
+                templates: ['default-svg']
+            })
+        )
+        .pipe( gulp.dest( 'img/icons/' ) )
+});
+
+/**
+ * Watch Files
+ */
 gulp.task('watch', function () {
     gulp.watch(paths.sass, ['sass']);
     gulp.watch(paths.scripts, ['js']);
     gulp.watch(paths.images, ['img']);
 });
 
-// Default
+/**
+ * Default
+ */
 gulp.task('default', ['sass', 'js', 'img', 'watch']);
-
