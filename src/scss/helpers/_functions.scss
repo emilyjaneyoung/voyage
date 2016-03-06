@@ -57,4 +57,34 @@
 // Grid
 // =========================================================================
 
+/*
+    Change the column and gutter values to reflect the grid that is being used.
+*/
 
+$column-width: 80;
+$gutter-width: 30;
+$columns: 12;
+
+@function gridsystem-width($columns:$columns) {
+    @return ($column-width * $columns) + ($gutter-width * $columns);
+}
+
+$total-width: gridsystem-width($columns);
+
+$min-width: 999999;
+$correction: 0.5 / $min-width * 100;
+
+@mixin column($x,$columns:$columns) {
+    float: left;
+    width: $total-width*(((($gutter-width+$column-width)*$x)-$gutter-width) / gridsystem-width($columns));
+    margin-left: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+    margin-right: $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}
+@mixin push($offset:1) {
+    margin-left: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}
+@mixin pull($offset:1) {
+    margin-right: $total-width*((($gutter-width+$column-width)*$offset) / gridsystem-width($columns)) + $total-width*(($gutter-width*.5)/gridsystem-width($columns));
+}
+
+$total-width: 100%;

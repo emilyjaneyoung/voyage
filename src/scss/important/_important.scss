@@ -1,4 +1,4 @@
-// =========================================================================
+ // =========================================================================
 // Important - Cascade Dependant Code
 // =========================================================================
 
@@ -10,7 +10,7 @@
 }
 
 /* must have higher specificity than alternative color schemes inline styles */
-.site .skip-link {
+.skip-link {
 	background-color: #f1f1f1;
 	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
 	color: #21759b;
@@ -25,7 +25,7 @@
 	top: -9999em;
 }
 
-.site .skip-link:focus {
+.skip-link:focus {
 	clip: auto;
 	height: auto;
 	left: 6px;
