@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     prefix = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
+    scsslint = require('gulp-scss-lint'),
     concat = require('gulp-concat'),
     minifycss = require('gulp-minify-css'),
     uglify = require('gulp-uglify'),
@@ -65,6 +66,9 @@ gulp.task('sass', function(){
     return gulp.src(paths.sass)
         .pipe(sourcemaps.init())
         .pipe(plumber({ errorHandler: onError }))
+        .pipe(scsslint({
+            'config': '.scss-lint.yml'
+        }))
         .pipe(sass.sync({errLogToConsole: true}))
         .pipe(prefix({
             browsers: ['last 4 version', 'ie 8', 'ie 7'],
