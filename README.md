@@ -32,8 +32,8 @@ Use `npm rebuild node-sass` if updated.
 
 ## Running Gulp
 
-Run 'gulp'
-Run 'gulp sprites' to create the SVG spritesheet and PNG fallbacks.
+* Run 'gulp'
+* Run 'gulp sprites' to create the SVG spritesheet and PNG fallbacks.
 
 ## EditorConfig
 
@@ -44,6 +44,6 @@ Install `EditorConfig` with [Package Control](https://sublime.wbond.net) and res
 
 [MIT](http://opensource.org/licenses/MIT)
 
-# Roadmap ✈
+## Roadmap ✈
 
-+ Styleguide
+* Styleguide
