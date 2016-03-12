@@ -13,6 +13,8 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     svg2png    = require('gulp-svg2png'),
     svgSymbols = require('gulp-svg-symbols'),
+    browserSync = require('browser-sync'),
+    reload      = browserSync.reload,
 
     paths = {
         scripts: [
@@ -66,9 +68,9 @@ gulp.task('sass', function(){
     return gulp.src(paths.sass)
         .pipe(sourcemaps.init())
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(scsslint({
-            'config': '.scss-lint.yml'
-        }))
+        //.pipe(scsslint({
+            //'config': '.scss-lint.yml'
+        //}))
         .pipe(sass.sync({errLogToConsole: true}))
         .pipe(prefix({
             browsers: ['last 4 version', 'ie 8', 'ie 7'],
@@ -129,15 +131,27 @@ gulp.task('sprites', ['svg2png'], function () {
 });
 
 /**
+ * Browser Sync
+ */
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+});
+
+/**
  * Watch Files
  */
 gulp.task('watch', function () {
-    gulp.watch(paths.sass, ['sass']);
-    gulp.watch(paths.scripts, ['js']);
-    gulp.watch(paths.images, ['img']);
+    gulp.watch(paths.sass, ['sass']).on("change", reload);
+    gulp.watch(paths.scripts, ['js']).on("change", reload);
+    gulp.watch(paths.images, ['img']).on("change", reload);
+    gulp.watch("*.html").on("change", reload);
 });
 
 /**
  * Default
  */
-gulp.task('default', ['sass', 'js', 'img', 'watch']);
+gulp.task('default', ['sass', 'js', 'img', 'watch', 'browser-sync']);
