@@ -16,17 +16,12 @@ Borrowing heavily from SMACSS, BEM & OOCSS.
 1. [Node.js](http://nodejs.org/)
 2. [Node Sass](https://www.npmjs.com/package/node-sass)
 3. [Gulp](http://gulpjs.com/)
-4. [Ruby](https://www.ruby-lang.org/en/downloads/)
 
 ## Node Sass
 
 `npm install node-sass`
 
 Use `npm rebuild node-sass` if updated.
-
-## Ruby
-
-We use a gem for scss_lint. Install this gem once ruby is installed `gem install scss_lint`
 
 ## Gulp Installation
 
