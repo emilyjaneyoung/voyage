@@ -69,7 +69,9 @@ gulp.task('sass', function(){
         .pipe(sourcemaps.init())
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass.sync({errLogToConsole: true}))
-        .pipe(sassLint())
+        .pipe(sassLint({
+            'config': '.sass-lint.yml'
+        }))
         .pipe(sassLint.format())
         .pipe(sassLint.failOnError())
         .pipe(prefix({
