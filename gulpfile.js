@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     svg2png    = require('gulp-svg2png'),
     svgSymbols = require('gulp-svg-symbols'),
     browserSync = require('browser-sync'),
-    reload      = browserSync.reload,
+    reload = browserSync.reload,
 
     paths = {
         scripts: [
