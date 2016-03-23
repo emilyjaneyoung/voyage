@@ -33,12 +33,12 @@
 			$unit: unit($value);
 			$val: parseInt($value);
 
-			@if $unit == "px" {
+			@if $unit == 'px' {
 				$px : append($px,  $value);
 				$rem: append($rem, ($val / 10 + rem));
 			}
 
-			@if $unit == "rem" {
+			@if $unit == 'rem' {
 				$px : append($px,  ($val * 10 + px));
 				$rem: append($rem, $value);
 			}
