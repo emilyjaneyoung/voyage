@@ -44,4 +44,36 @@ $titleFont: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // Font Face
 // =========================================================================
 
+// Normal
+@font-face {
+	font-family: 'Custom Font';
+	font-style: normal;
+	font-weight: 400;
+	src: url(custom-font.woff2) format('woff2');
+}
 
+// Bold
+@font-face {
+	font-family: 'Custom Font';
+	font-style: normal;
+	font-weight: 800;
+	src: url(custom-font.woff2) format('woff2');
+}
+
+// Italic
+@font-face {
+	font-family: 'Custom Font';
+	font-style: italic;
+	font-weight: 400;
+	src: url(custom-font.woff2) format('woff2');
+}
+
+// Italic and Bold
+@font-face {
+	font-family: 'Custom Font';
+	font-style: italic;
+	font-weight: 800;
+	src: url(custom-font.woff2) format('woff2');
+}
+
+// This ensures we don't download what is not needed
