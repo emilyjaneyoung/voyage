@@ -7,9 +7,9 @@ This repo is mostly for me, by me.
 Following a Scalable and Modular Architecture for CSS.
 Borrowing heavily from SMACSS, BEM & OOCSS.
 
-[![Build Status](https://travis-ci.org/emilyjaneyoung/voyage.svg)](https://travis-ci.org/emilyjaneyoung/voyage)
-[![Code Climate](https://codeclimate.com/github/emilyjaneyoung/voyage/badges/gpa.svg)](https://codeclimate.com/github/emilyjaneyoung/voyage)
-[![Dependency Status](https://david-dm.org/emilyjaneyoung/voyage.svg)](https://david-dm.org/emilyjaneyoung/voyage)
+[![Build Status](https://travis-ci.org/livingincircuits/voyage.svg)](https://travis-ci.org/livingincircuits/voyage)
+[![Code Climate](https://codeclimate.com/github/livingincircuits/voyage/badges/gpa.svg)](https://codeclimate.com/github/livingincircuits/voyage)
+[![Dependency Status](https://david-dm.org/livingincircuits/voyage.svg)](https://david-dm.org/livingincircuits/voyage)
 
 ## Prerequisites
 
