@@ -22,4 +22,64 @@
 // Grid Options
 // =========================================================================
 
+.grid-1-pull {
+    @include pull(1);
+}
 
+.grid-1-push {
+    @include push(1);
+}
+
+.grid-1 {
+    @include column(1);
+}
+
+.grid-2 {
+    @include column(2);
+}
+
+.grid-3 {
+    @include column(3);
+}
+
+.grid-4 {
+    @include column(4);
+}
+
+.grid-5 {
+    @include column(5);
+}
+
+.grid-6 {
+    @include column(6);
+    .grid-6-nested {
+        @include column(3,6); // 3 col grid goes into 6 col grid 2 times
+    }
+}
+
+.grid-7 {
+    @include column(7);
+}
+
+.grid-8 {
+    @include column(8);
+}
+
+.grid-9 {
+    @include column(9);
+}
+
+.grid-10 {
+    @include column(10);
+}
+
+.grid-11 {
+    @include column(11);
+}
+
+.grid-12 {
+    @include column(12);
+    .grid-4-nested {
+        @include column(4,12); // 4 col grid goes into 12 col grid 3 times
+    }
+}
