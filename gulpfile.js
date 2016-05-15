@@ -66,7 +66,7 @@ onError = function (err) {
  */
 gulp.task('sass', function(){
     return gulp.src(paths.sass)
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass.sync({errLogToConsole: true}))
         .pipe(sassLint({
@@ -82,9 +82,14 @@ gulp.task('sass', function(){
             compatibility: 'ie8'
         }))
         .pipe(header(themeBanner, { theme : theme } ))
-        .pipe(sourcemaps.write('./'))
+        //.pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
 });
+
+/*
+Sourcemaps Issues
+https://github.com/floridoo/gulp-sourcemaps/issues/192
+*/
 
 /**
  * JavaScript
