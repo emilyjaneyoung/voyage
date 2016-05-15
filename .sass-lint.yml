@@ -168,7 +168,6 @@ rules:
     - 1
     - include: false
   trailing-semicolon: 1
-  url-quotes: 1
   variable-for-property:
     - 0
     - properties: []
