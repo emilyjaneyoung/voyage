@@ -178,7 +178,7 @@ img.aligncenter {
     width: 100%;
     height: 1px;
     display: block;
-    @extend %clearfix;
+    @include clearfix();
     border: 0;
 }
 

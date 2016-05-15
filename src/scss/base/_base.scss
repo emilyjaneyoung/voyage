@@ -29,7 +29,7 @@ img {
 
 a {
 	text-decoration: none;
-	@include transition(all, 0.125s, linear);
+	@include transition(all, 0.2s, linear);
 	@include breakpoint(small) {
 		@include no-transition(0);
 	}

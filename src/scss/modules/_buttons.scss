@@ -18,7 +18,7 @@
 	border: none;
 	text-align: center;
     text-decoration: none;
-    @include transition(all, 0.125s, linear);
+    @include transition(all, 0.2s, linear);
 
 	@include state() {
 		color: $white;
@@ -39,7 +39,6 @@
 	&--submit {
 		color: $white;
 		background-color: $black;
-		@include transition(all, 0.125s, linear);
 	}
 
 }

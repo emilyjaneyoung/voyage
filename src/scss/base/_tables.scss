@@ -30,7 +30,7 @@
     tbody tr {
 
         border: 1px solid $black;
-        @include transition(all, 0.125s, linear);
+        @include transition(all, 0.2s, linear);
 
         td {
             border: 0;
