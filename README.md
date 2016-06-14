@@ -47,3 +47,4 @@ Install `EditorConfig` with [Package Control](https://sublime.wbond.net) and res
 ## Roadmap ✈
 
 * Styleguide
+* SVG Instructions
