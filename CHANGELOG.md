@@ -1,13 +1,18 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## 1.0.2 - 2016-03-23
+## 1.0.2 - 2016-05-17
+### Updated
+- Updated .scss linter
+- Uncommented Sourcemaps. Need to use Node -v6
+
+## 1.0.2 - 2016-05-15
 ### Updated
 - Updated .scss linter
 ### Tested
 Latest Node v6.1.0 tested and Sourcemaps broken. Fine with Node versions prior to v6
 
-## 1.0.2 - 2016-05-15
+## 1.0.2 - 2016-03-23
 ### Updated
 - Removed Ruby Dependancy
 - Updated .scss linter
