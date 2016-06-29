@@ -47,7 +47,7 @@ function iconsFallback(excludeClass) {
                     var newImg = document.createElement("img");
 
                     // Assign src attribute
-                    newImg.src = "assets/dist/icons/png/" + svgId + ".png";
+                    newImg.src = "img/icons/" + svgId + ".png";
 
                     // Assign alt attribute
                     newImg.alt = svgTitle ? svgTitle : '';

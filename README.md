@@ -34,6 +34,7 @@ Use `npm rebuild node-sass` if updated.
 
 * Run 'gulp'
 * Run 'gulp sprites' to create the SVG spritesheet and PNG fallbacks.
+* Once you have run the above, open svg-symbols.svg inside img/icons and paste this code into a file that you include in your header.
 
 ## EditorConfig
 
