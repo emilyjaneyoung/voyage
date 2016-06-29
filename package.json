@@ -23,6 +23,6 @@
     "gulp-jshint": "~2.0.0",
     "jshint": "~2.9.2",
     "gulp-svg-symbols": "~1.0.0",
-    "gulp-svg2png": "~1.0.0"
+    "gulp-svg2png": "~2.0.0"
   }
 }
