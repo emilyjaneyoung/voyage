@@ -2,24 +2,23 @@
 // Base - Defaults and Content
 // =========================================================================
 
-*, *:before, *:after {
-	@include box-sizing(border-box);
-}
-
 html {
-	font-size: 62.5%;
-	overflow-x: hidden;
-	font-family: sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
+    font-size: 1em;
+    line-height: 1.5;
+    overflow-y: scroll;
+    overflow-x: hidden; // Use when using content off screen
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: $baseFont;
+    font-weight: 300;
+    box-sizing: border-box;
 }
 
-body {
-	font-family: $baseFont;
-	font-size: 1.6em;
-	line-height: 1.5;
-	font-weight: 300;
-	font-smoothing: antialiased;
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 img {
@@ -36,7 +35,7 @@ a {
 }
 
 a:visited {
-	color: darken($white, 10%);
+
 }
 
 a:hover {

@@ -39,8 +39,8 @@ body:not(:-moz-handler-blocked) fieldset {
     padding: 0 2%;
     cursor: pointer;
     font-weight: 300;
-    @include rem(font-size, 1.4rem);
     vertical-align: middle;
+    @include x-rem(font-size, 14px);
 
     @include state() {
         border: 2px solid $black;
@@ -49,7 +49,7 @@ body:not(:-moz-handler-blocked) fieldset {
 }
 
 .theme-form textarea {
-    @include rem(height, 19.5rem);
+    @include x-rem(height, 195px);
     resize: vertical;
 }
 
