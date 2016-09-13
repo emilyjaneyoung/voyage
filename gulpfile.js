@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
-    minifycss = require('gulp-minify-css'),
+    cleanCSS = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin'),
     plumber = require('gulp-plumber'),
@@ -12,7 +12,7 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     sassLint = require('gulp-sass-lint'),
     svg2png    = require('gulp-svg2png'),
-    svgSymbols = require('gulp-svg-symbols'),
+    sprites = require('gulp-svg-symbols'),
 
     paths = {
         scripts: [
@@ -22,8 +22,8 @@ var gulp = require('gulp'),
         images: [
             'img/*'
         ],
-        icons: [
-            'img/icons/**/*.svg'
+        svg: [
+            'img/svg/**/*.svg'
         ],
         sass: [
             'src/scss/*.scss',
@@ -76,9 +76,7 @@ gulp.task('sass', function(){
             browsers: ['last 4 version', 'ie 8', 'ie 7'],
             cascade: true
         }))
-        .pipe(minifycss({
-            compatibility: 'ie8'
-        }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(header(themeBanner, { theme : theme } ))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
@@ -109,25 +107,23 @@ gulp.task('img', function () {
  * SVG PNG fallback task
  */
 gulp.task('svg2png', function () {
-    return gulp.src(paths.icons)
-    .pipe(plumber({ errorHandler: onError }))
+    return gulp.src(paths.svg)
         .pipe(svg2png())
-        .pipe(gulp.dest('img/icons/'))
+        .pipe(gulp.dest('img/'))
 });
 
 /**
- * Sprites task
+ * Sprites
  */
 gulp.task('sprites', ['svg2png'], function () {
-    return gulp.src(paths.icons)
-    .pipe(plumber({ errorHandler: onError }))
+    return gulp.src(paths.svg)
         .pipe(
-            svgSymbols({
+            sprites({
                 title: false,
                 templates: ['default-svg']
             })
         )
-        .pipe( gulp.dest( 'img/icons/' ) )
+        .pipe( gulp.dest( 'img/svg/' ) )
 });
 
 /**

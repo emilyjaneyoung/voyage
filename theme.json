@@ -1,7 +1,7 @@
 {
   "name": "Voyage",
-  "uri": "https://github.com/emilyjaneyoung/voyage",
-  "version": "1.0.0",
+  "uri": "https://github.com/livingincircuits/voyage",
+  "version": "1.0.3",
   "author": "Emily Young",
   "description" : "Voyage Gulp Tasks",
   "license" : "MIT"
