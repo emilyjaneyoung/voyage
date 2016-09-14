@@ -80,8 +80,6 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./'))
 });
 
-// 833 warnings
-
 /**
  * JavaScript
  */
