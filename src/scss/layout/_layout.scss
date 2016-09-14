@@ -3,18 +3,18 @@
 // =========================================================================
 
 .row {
-	max-width: 1520px;
-	margin: 0 auto;
-	padding-left: 2%;
-	padding-right: 2%;
-	@include clearfix();
+    max-width: 1520px;
+    margin: 0 auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    @include clearfix();
 }
 
 .row-no-space {
 
-	@include breakpoint(767) {
-		padding: 0;
-	}
+    @include breakpoint(767) {
+        padding: 0;
+    }
 
 }
 
@@ -51,10 +51,13 @@
 }
 
 .grid-6 {
+
     @include column(6);
+
     .grid-6-nested {
-        @include column(3,6); // 3 col grid goes into 6 col grid 2 times
+        @include column(3, 6); // 3 col grid goes into 6 col grid 2 times
     }
+
 }
 
 .grid-7 {
@@ -78,8 +81,11 @@
 }
 
 .grid-12 {
+
     @include column(12);
+
     .grid-4-nested {
-        @include column(4,12); // 4 col grid goes into 12 col grid 3 times
+        @include column(4, 12); // 4 col grid goes into 12 col grid 3 times
     }
+
 }

@@ -6,46 +6,46 @@
 .says,
 .screen-reader-response,
 .screen-reader-text {
-	@include hide-visually();
+    @include hide-visually();
 }
 
 /* must have higher specificity than alternative color schemes inline styles */
 .skip-link {
-	background-color: $white;
-	box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
-	color: $black;
-	display: block;
-	font-size: 14px;
-	font-weight: 700;
-	left: -9999em;
-	outline: none;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	text-transform: none;
-	top: -9999em;
+    background-color: $white;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .2);
+    color: $black;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    left: -9999em;
+    outline: none;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    text-transform: none;
+    top: -9999em;
 }
 
 .skip-link:focus {
-	clip: auto;
-	height: auto;
-	left: 6px;
-	top: 7px;
-	width: auto;
-	z-index: 100000;
+    clip: auto;
+    height: auto;
+    left: 6px;
+    top: 7px;
+    width: auto;
+    z-index: 100000;
 }
 
 .ie-message {
 
-	display: block;
-	width: 100%;
-	padding: 10px;
-	text-align: center;
-	color: $white;
-	background-color: $black;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: $white;
+    background-color: $black;
 
-	a {
-		text-decoration: underline;
-		color: $white;
-	}
+    a {
+        text-decoration: underline;
+        color: $white;
+    }
 
 }

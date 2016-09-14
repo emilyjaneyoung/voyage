@@ -9,7 +9,7 @@ legend {
 
 fieldset {
     border: 0;
-    padding: 0.01em 0 0 0;
+    padding: .01em 0 0 0;
     margin: 0;
     min-width: 0;
 }
@@ -32,10 +32,10 @@ body:not(:-moz-handler-blocked) fieldset {
 .theme-form input[type=search],
 .theme-form textarea {
 
-	box-shadow: none;
+    box-shadow: none;
     height: 45px;
     line-height: 45px;
-	margin: 0 2% 0 0;
+    margin: 0 2% 0 0;
     padding: 0 2%;
     cursor: pointer;
     font-weight: 300;
@@ -53,31 +53,37 @@ body:not(:-moz-handler-blocked) fieldset {
     resize: vertical;
 }
 
-
 // =========================================================================
 // Form Texts
 // =========================================================================
 
 .theme-form .success {
-	background: $color__success;
+
+    background: $color__success;
+    color: $white;
+
+    a {
+        color: $white;
+    }
+
+    ul {
+        @include list();
+    }
+
 }
 
 .theme-form .error {
+
     background: $color__danger;
-}
+    color: $white;
 
-.theme-form .success,
-.theme-form .error {
+    a {
+        color: $white;
+    }
 
-	color: $white;
-
-	a {
-		color: $white;
-	}
-
-	ul {
-		@include list();
-	}
+    ul {
+        @include list();
+    }
 
 }
 
@@ -85,19 +91,9 @@ body:not(:-moz-handler-blocked) fieldset {
 // Placeholders
 // =========================================================================
 
-::-webkit-input-placeholder {
-	color: $black;
-}
-
-:-moz-placeholder {
-	color: $black;
-}
-
-::-moz-placeholder {
-	color: $black;
-	opacity: 1;
-}
-
+::-webkit-input-placeholder,
+:-moz-placeholder,
 :-ms-input-placeholder {
-	color: $black;
+    color: $black;
+    opacity: 1;
 }

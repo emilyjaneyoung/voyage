@@ -65,13 +65,11 @@ onError = function (err) {
 gulp.task('sass', function(){
     return gulp.src(paths.sass)
         .pipe(sourcemaps.init())
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(sass.sync({errLogToConsole: true}))
-        .pipe(sassLint({
-            'config': '.sass-lint.yml'
-        }))
+        .pipe(sassLint())
         .pipe(sassLint.format())
         .pipe(sassLint.failOnError())
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(sass.sync({errLogToConsole: true}))
         .pipe(prefix({
             browsers: ['last 4 version', 'ie 8', 'ie 7'],
             cascade: true
@@ -81,6 +79,8 @@ gulp.task('sass', function(){
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./'))
 });
+
+// 833 warnings
 
 /**
  * JavaScript

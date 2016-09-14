@@ -17,21 +17,23 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 a {
-	text-decoration: none;
-	@include transition(all, 0.2s, linear);
-	@include breakpoint(small) {
-		@include no-transition(0);
-	}
+    text-decoration: none;
+    @include transition(all, .2s, linear);
+    @include breakpoint(small) {
+        @include no-transition(0);
+    }
 }
 
 a:visited {
@@ -39,24 +41,24 @@ a:visited {
 }
 
 a:hover {
-	outline: none;
+    outline: none;
 }
 
 a:active {
-	outline: none;
+    outline: none;
 }
 
 a[href^=tel] {
-	text-decoration: inherit;
-	color: inherit;
+    text-decoration: inherit;
+    color: inherit;
 }
 
 ::selection {
-	color: $white;
-	background: $black;
+    color: $white;
+    background: $black;
 }
 
 ::-moz-selection {
-	color: $white;
-	background: $black;
+    color: $white;
+    background: $black;
 }

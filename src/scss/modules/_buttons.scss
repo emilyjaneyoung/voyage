@@ -4,41 +4,41 @@
 
 .btn {
 
-	color: $white;
-	cursor: pointer;
-	display: block;
-	font-weight: 400;
-	height: 45px;
-	line-height: 45px;
-	position: relative;
-	vertical-align: middle;
-	width: 100%;
-	background: transparent;
-	font-family: $titleFont;
-	border: none;
-	text-align: center;
+    color: $white;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    vertical-align: middle;
+    width: 100%;
+    background: transparent;
+    font-family: $titleFont;
+    border: none;
+    text-align: center;
     text-decoration: none;
-    @include transition(all, 0.2s, linear);
+    @include transition(all, .2s, linear);
 
-	@include state() {
-		color: $white;
-	}
+    @include state() {
+        color: $white;
+    }
 
-	&--dark {
-		color: $color__secondary;
-	}
+    &--dark {
+        color: $color__secondary;
+    }
 
-	&--brand {
-		color: $color__primary;
-	}
+    &--brand {
+        color: $color__primary;
+    }
 
-	&--light {
-		color: $white;
-	}
+    &--light {
+        color: $white;
+    }
 
-	&--submit {
-		color: $white;
-		background-color: $black;
-	}
+    &--submit {
+        color: $white;
+        background-color: $black;
+    }
 
 }
