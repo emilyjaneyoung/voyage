@@ -3,14 +3,28 @@
 // =========================================================================
 
 /**
- * Base.
+ * Vars
+ */
+$g-spacing-base: 24px !default;
+$g-spacing-x2-small: $g-spacing-base / 6;
+$g-spacing-x-small: $g-spacing-base / 4;
+$g-spacing-small: $g-spacing-base / 2;
+$g-spacing-minor: $g-spacing-base / 1.5;
+$g-spacing-slight: $g-spacing-base * 1.5;
+$g-spacing-medium: $g-spacing-base * 2;
+$g-spacing-large: $g-spacing-base * 3;
+$g-spacing-x-large: $g-spacing-base * 5;
+$g-spacing-x2-large: $g-spacing-base * 6;
+
+/**
+ * Base
  */
 .h-spacing {
     margin-bottom: rem($g-spacing);
 }
 
 /**
- * Decrease from base.
+ * Decrease from base
  */
 .h-spacing-small {
     margin-bottom: rem($g-spacing-small);
@@ -25,7 +39,7 @@
 }
 
 /**
- * Increase from base.
+ * Increase from base
  */
 .h-spacing-large {
     margin-bottom: rem($g-spacing-large);
