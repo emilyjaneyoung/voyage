@@ -2,29 +2,55 @@
 // Spacers
 // =========================================================================
 
-.spacer {
+/**
+ * Base.
+ */
+.h-spacing {
+    margin-bottom: rem($g-spacing);
+}
 
-    margin-bottom: 3%;
+/**
+ * Decrease from base.
+ */
+.h-spacing-small {
+    margin-bottom: rem($g-spacing-small);
+}
 
-    &--small {
-        margin-bottom: 1%;
-    }
+.h-spacing-x-small {
+    margin-bottom: rem($g-spacing-x-small);
+}
 
-    &--double {
-        margin-top: 3%;
-        margin-bottom: 3%;
-    }
+.h-spacing-2x-small {
+    margin-bottom: rem($g-spacing-2x-small);
+}
 
-    &--large {
-        margin-bottom: 6%;
-    }
+/**
+ * Increase from base.
+ */
+.h-spacing-large {
+    margin-bottom: rem($g-spacing-large);
+}
 
-    &--padded-top {
-        padding-top: 3%;
-    }
+.h-spacing-x-large {
+    margin-bottom: rem($g-spacing-x-large);
+}
 
-    &--padded-bottom {
-        padding-bottom: 3%;
-    }
+.h-spacing-2x-large {
+    margin-bottom: rem($g-spacing-2x-large);
+}
 
+.h-spacing-3x-large {
+    margin-bottom: rem($g-spacing-3x-large);
+}
+
+.h-spacing-4x-large {
+    margin-bottom: rem($g-spacing-4x-large);
+}
+
+.h-spacing-5x-large {
+    margin-bottom: rem($g-spacing-5x-large);
+}
+
+.h-spacing-6x-large {
+    margin-bottom: rem($g-spacing-6x-large);
 }
