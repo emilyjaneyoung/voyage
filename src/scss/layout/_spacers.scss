@@ -5,66 +5,120 @@
 /**
  * Vars
  */
-$g-spacing-base: 24px !default;
-$g-spacing-x2-small: $g-spacing-base / 6;
-$g-spacing-x-small: $g-spacing-base / 4;
-$g-spacing-small: $g-spacing-base / 2;
-$g-spacing-minor: $g-spacing-base / 1.5;
-$g-spacing-slight: $g-spacing-base * 1.5;
-$g-spacing-medium: $g-spacing-base * 2;
-$g-spacing-large: $g-spacing-base * 3;
-$g-spacing-x-large: $g-spacing-base * 5;
-$g-spacing-x2-large: $g-spacing-base * 6;
+$g-spacing-base: 40px !default;
+$g-spacing-xxxx-decrease: $g-spacing-base / 6;
+$g-spacing-xxx-decrease: $g-spacing-base / 4;
+$g-spacing-xx-decrease: $g-spacing-base / 3;
+$g-spacing-x-decrease: $g-spacing-base / 2;
+$g-spacing-decrease: $g-spacing-base / 1.5;
+$g-spacing-increase: $g-spacing-base * 1.5;
+$g-spacing-x-increase: $g-spacing-base * 2;
+$g-spacing-xx-increase: $g-spacing-base * 3;
+$g-spacing-xxx-increase: $g-spacing-base * 5;
+$g-spacing-xxxx-increase: $g-spacing-base * 6;
 
 /**
- * Base
+ * Base Horizontal Spacing
  */
 .h-spacing {
-    margin-bottom: rem($g-spacing);
+    @include x-rem(margin-bottom, $g-spacing-base);
 }
 
 /**
  * Decrease from base
  */
-.h-spacing-small {
-    margin-bottom: rem($g-spacing-small);
+.h-spacing-xxxx-decrease {
+    @include x-rem(margin-bottom, $g-spacing-xxxx-increase);
 }
 
-.h-spacing-x-small {
-    margin-bottom: rem($g-spacing-x-small);
+.h-spacing-xxx-decrease {
+    @include x-rem(margin-bottom, $g-spacing-xxx-increase);
 }
 
-.h-spacing-2x-small {
-    margin-bottom: rem($g-spacing-2x-small);
+.h-spacing-xx-decrease {
+    @include x-rem(margin-bottom, $g-spacing-xx-increase);
+}
+
+.h-spacing-x-decrease {
+    @include x-rem(margin-bottom, $g-spacing-x-increase);
+}
+
+.h-spacing-decrease {
+    @include x-rem(margin-bottom, $g-spacing-increase);
 }
 
 /**
  * Increase from base
  */
-.h-spacing-large {
-    margin-bottom: rem($g-spacing-large);
+.h-spacing-xxxx-increase {
+    @include x-rem(margin-bottom, $g-spacing-xxxx-increase);
 }
 
-.h-spacing-x-large {
-    margin-bottom: rem($g-spacing-x-large);
+.h-spacing-xxx-increase {
+    @include x-rem(margin-bottom, $g-spacing-xxx-increase);
 }
 
-.h-spacing-2x-large {
-    margin-bottom: rem($g-spacing-2x-large);
+.h-spacing-xx-increase {
+    @include x-rem(margin-bottom, $g-spacing-xx-increase);
 }
 
-.h-spacing-3x-large {
-    margin-bottom: rem($g-spacing-3x-large);
+.h-spacing-x-increase {
+    @include x-rem(margin-bottom, $g-spacing-x-increase);
 }
 
-.h-spacing-4x-large {
-    margin-bottom: rem($g-spacing-4x-large);
+.h-spacing-increase {
+    @include x-rem(margin-bottom, $g-spacing-increase);
 }
 
-.h-spacing-5x-large {
-    margin-bottom: rem($g-spacing-5x-large);
+/**
+ * Base Horizontal Padding
+ */
+.h-padding {
+    @include x-rem(padding-bottom, $g-spacing-base);
 }
 
-.h-spacing-6x-large {
-    margin-bottom: rem($g-spacing-6x-large);
+/**
+ * Decrease from base
+ */
+.h-padding-xxxx-decrease {
+    @include x-rem(padding-bottom, $g-spacing-xxxx-increase);
+}
+
+.h-padding-xxx-decrease {
+    @include x-rem(padding-bottom, $g-spacing-xxx-increase);
+}
+
+.h-padding-xx-decrease {
+    @include x-rem(padding-bottom, $g-spacing-xx-increase);
+}
+
+.h-padding-x-decrease {
+    @include x-rem(padding-bottom, $g-spacing-x-increase);
+}
+
+.h-padding-decrease {
+    @include x-rem(padding-bottom, $g-spacing-increase);
+}
+
+/**
+ * Increase from base
+ */
+.h-padding-xxxx-increase {
+    @include x-rem(padding-bottom, $g-spacing-xxxx-increase);
+}
+
+.h-padding-xxx-increase {
+    @include x-rem(padding-bottom, $g-spacing-xxx-increase);
+}
+
+.h-padding-xx-increase {
+    @include x-rem(padding-bottom, $g-spacing-xx-increase);
+}
+
+.h-padding-x-increase {
+    @include x-rem(padding-bottom, $g-spacing-x-increase);
+}
+
+.h-padding-increase {
+    @include x-rem(padding-bottom, $g-spacing-increase);
 }
