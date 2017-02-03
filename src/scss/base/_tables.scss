@@ -8,8 +8,37 @@
     border-collapse: collapse;
     border-spacing: 0;
 
-    @include breakpoint(767) {
+    @media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+        display: block;
         table-layout: auto;
+
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+            display: block;
+        }
+
+        th {
+            border: 0;
+        }
+
+        td {
+            border: none;
+            position: relative;
+        }
+
+        td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+        }
+
     }
 
     thead th,
@@ -48,6 +77,100 @@
 
     tr:nth-child(2n+2) {
         background: darken($white, 50%);
+    }
+
+}
+
+.r-table {
+
+    width: 100%;
+    @include rem(margin, 0 0 2rem 0);
+
+    @include breakpoint(1420) {
+        display: inline-block;
+        vertical-align: top;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        border-collapse: collapse;
+        border-spacing: 0;
+        -webkit-overflow-scrolling: touch;
+        background: radial-gradient(left, ellipse, rgba(0,0,0, .8) 0%, rgba(0,0,0, 0) 75%) 0 center,
+                  radial-gradient(right, ellipse, rgba(0,0,0, .8) 0%, rgba(0,0,0, 0) 75%) 100% center;
+        background-size: 10px 100%, 10px 100%;
+        background-attachment: scroll, scroll;
+        background-repeat: no-repeat;
+    }
+
+    td, th {
+        padding: 10px 20px;
+        vertical-align: middle;
+        border-right: 1px solid $white;
+    }
+
+    th {
+        border-right: 1px solid lighten($color__primary, 20%);
+    }
+
+    td:first-child {
+
+        @include breakpoint(1420) {
+            background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+            background-repeat: no-repeat;
+            background-size: 20px 100%;
+        }
+
+    }
+
+    td:last-child {
+
+        @include breakpoint(1420) {
+            background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            background-size: 20px 100%;
+        }
+
+    }
+
+    thead tr {
+
+        background-color: $color__primary;
+        color: $white;
+        font-weight: normal;
+        font-family: $baseFont;
+
+        strong {
+            font-weight: normal;
+        }
+
+    }
+
+    tbody tr {
+
+        &:nth-child(even) {
+            background-color: $black;
+        }
+
+        &:nth-child(odd) {
+            background-color: $black;
+        }
+
+    }
+
+    .collapsing {
+        width: 1%;
+        white-space: nowrap;
+    }
+
+    a {
+
+        color: $color__primary;
+
+        @include state() {
+            text-decoration: none;
+        }
+
     }
 
 }
