@@ -91,9 +91,18 @@ body:not(:-moz-handler-blocked) fieldset {
 // Placeholders
 // =========================================================================
 
-::-webkit-input-placeholder,
-:-moz-placeholder,
+::-webkit-input-placeholder {
+    color: $black;
+}
+
+:-moz-placeholder {
+    color: $black;
+}
+
+::-moz-placeholder {
+    color: $black;
+}
+
 :-ms-input-placeholder {
     color: $black;
-    opacity: 1;
 }
