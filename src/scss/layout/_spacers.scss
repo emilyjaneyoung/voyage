@@ -3,21 +3,6 @@
 // =========================================================================
 
 /**
- * Vars
- */
-$g-spacing-base: 40px !default;
-$g-spacing-xxxx-decrease: $g-spacing-base / 6;
-$g-spacing-xxx-decrease: $g-spacing-base / 4;
-$g-spacing-xx-decrease: $g-spacing-base / 3;
-$g-spacing-x-decrease: $g-spacing-base / 2;
-$g-spacing-decrease: $g-spacing-base / 1.5;
-$g-spacing-increase: $g-spacing-base * 1.5;
-$g-spacing-x-increase: $g-spacing-base * 2;
-$g-spacing-xx-increase: $g-spacing-base * 3;
-$g-spacing-xxx-increase: $g-spacing-base * 5;
-$g-spacing-xxxx-increase: $g-spacing-base * 6;
-
-/**
  * Base Horizontal Spacing
  */
 .h-spacing {
@@ -28,23 +13,23 @@ $g-spacing-xxxx-increase: $g-spacing-base * 6;
  * Decrease from base
  */
 .h-spacing-xxxx-decrease {
-    @include x-rem(margin-bottom, $g-spacing-xxxx-increase);
+    @include x-rem(margin-bottom, $g-spacing-xxxx-decrease);
 }
 
 .h-spacing-xxx-decrease {
-    @include x-rem(margin-bottom, $g-spacing-xxx-increase);
+    @include x-rem(margin-bottom, $g-spacing-xxx-decrease);
 }
 
 .h-spacing-xx-decrease {
-    @include x-rem(margin-bottom, $g-spacing-xx-increase);
+    @include x-rem(margin-bottom, $g-spacing-xx-decrease);
 }
 
 .h-spacing-x-decrease {
-    @include x-rem(margin-bottom, $g-spacing-x-increase);
+    @include x-rem(margin-bottom, $g-spacing-x-decrease);
 }
 
 .h-spacing-decrease {
-    @include x-rem(margin-bottom, $g-spacing-increase);
+    @include x-rem(margin-bottom, $g-spacing-decrease);
 }
 
 /**
