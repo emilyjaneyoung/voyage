@@ -66,23 +66,23 @@
  * Decrease from base
  */
 .h-padding-xxxx-decrease {
-    @include x-rem(padding-bottom, $g-spacing-xxxx-increase);
+    @include x-rem(padding-bottom, $g-spacing-xxxx-decrease);
 }
 
 .h-padding-xxx-decrease {
-    @include x-rem(padding-bottom, $g-spacing-xxx-increase);
+    @include x-rem(padding-bottom, $g-spacing-xxx-decrease);
 }
 
 .h-padding-xx-decrease {
-    @include x-rem(padding-bottom, $g-spacing-xx-increase);
+    @include x-rem(padding-bottom, $g-spacing-xx-decrease);
 }
 
 .h-padding-x-decrease {
-    @include x-rem(padding-bottom, $g-spacing-x-increase);
+    @include x-rem(padding-bottom, $g-spacing-x-decrease);
 }
 
 .h-padding-decrease {
-    @include x-rem(padding-bottom, $g-spacing-increase);
+    @include x-rem(padding-bottom, $g-spacing-decrease);
 }
 
 /**
