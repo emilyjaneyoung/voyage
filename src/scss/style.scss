@@ -3,7 +3,7 @@
 // =========================================================================
 
 // =========================================================================
-// Helpers - Project Dependable Helpers
+// Default mixins and functions, Project Dependable Helpers (h-)
 // =========================================================================
 
 @import "helpers/functions";
@@ -14,7 +14,7 @@
 @import "helpers/animations";
 
 // =========================================================================
-// Base - Defaults and Content
+// Base - Ground-zero defaults with Theme (t-)
 // =========================================================================
 
 @import "base/base";
@@ -24,20 +24,20 @@
 @import "base/theme";
 
 // =========================================================================
-// Layout - Sections of Page
+// Layout (l-) - Sections of Page Cosmetic-free.
 // =========================================================================
 
 @import "layout/layout";
 @import "layout/spacers";
 
 // =========================================================================
-// Modules - Reusable Modular Parts
+// Reusable Modular Objects (o-) & Static Components (c-)
 // =========================================================================
 
 @import "modules/buttons";
 
 // =========================================================================
-// State - JS Dependant
+// State - JS Dependant Classes
 // =========================================================================
 
 @import "state/state";
