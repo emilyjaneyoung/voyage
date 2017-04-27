@@ -2,8 +2,11 @@
 // Base Style File
 // =========================================================================
 
+// Set up so we avoid cascade leaks.
+// https://www.smashingmagazine.com/2014/07/bem-methodology-for-small-projects/
+
 // =========================================================================
-// Default mixins and functions, Project Dependable Helpers (h-)
+// Default mixins and functions, Helpers (h-) Utilities (u-)
 // =========================================================================
 
 @import "helpers/functions";
@@ -11,6 +14,7 @@
 @import "helpers/mixins";
 @import "helpers/normalize";
 @import "helpers/helper";
+@import "helpers/utilities";
 @import "helpers/animations";
 
 // =========================================================================
@@ -37,13 +41,13 @@
 @import "modules/buttons";
 
 // =========================================================================
-// State - JS Dependant Classes
+// State - JS Dependant Classes (js-)
 // =========================================================================
 
 @import "state/state";
 
 // =========================================================================
-// Important - Cascade Dependant Code
+// Important - Cascade Dependant Code (i-)
 // =========================================================================
 
 @import "important/important";
