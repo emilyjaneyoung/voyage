@@ -2,7 +2,8 @@
 
 Every website should be unique but each starting point tends to be the same. **Voyage** is the difference.
 
-This repo is mostly for me, by me.
+This is a pretty old toolkit and is unlikely to continue development. 
+
 
 Following a Scalable and Modular Architecture for CSS.
 Borrowing heavily from SMACSS, BEM & OOCSS.
