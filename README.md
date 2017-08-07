@@ -2,10 +2,6 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)](http://forthebadge.com)
 
-
-**This is a pretty old toolkit and is unlikely to continue development.**
-
-
 Following a Scalable and Modular Architecture for CSS.
 Borrowing heavily from SMACSS, BEM & OOCSS.
 
