@@ -34,6 +34,18 @@ $color__success: #87C80A;
 $radius: 2px;
 $unit20: 2rem;
 
+$g-spacing-base: 60px !default;
+$g-spacing-xxxx-decrease: $g-spacing-base / 6;
+$g-spacing-xxx-decrease: $g-spacing-base / 4;
+$g-spacing-xx-decrease: $g-spacing-base / 3;
+$g-spacing-x-decrease: $g-spacing-base / 2;
+$g-spacing-decrease: $g-spacing-base / 1.5;
+$g-spacing-increase: $g-spacing-base * 1.5;
+$g-spacing-x-increase: $g-spacing-base * 2;
+$g-spacing-xx-increase: $g-spacing-base * 3;
+$g-spacing-xxx-increase: $g-spacing-base * 5;
+$g-spacing-xxxx-increase: $g-spacing-base * 6;
+
 // =========================================================================
 // Typeface Rules
 // =========================================================================
@@ -77,4 +89,4 @@ $titleFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
     src: url(custom-font.woff2) format("woff2");
 }
 
-// This ensures we don"t download what is not needed
+// This ensures we dont download what is not needed

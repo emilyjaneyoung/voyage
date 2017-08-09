@@ -84,7 +84,7 @@
 .r-table {
 
     width: 100%;
-    @include rem(margin, 0 0 2rem 0);
+    @include x-rem(margin, 0 0 20px 0);
 
     @include breakpoint(1420) {
         display: inline-block;
@@ -94,15 +94,14 @@
         white-space: nowrap;
         border-collapse: collapse;
         border-spacing: 0;
-        -webkit-overflow-scrolling: touch;
-        background: radial-gradient(left, ellipse, rgba(0,0,0, .8) 0%, rgba(0,0,0, 0) 75%) 0 center,
-                  radial-gradient(right, ellipse, rgba(0,0,0, .8) 0%, rgba(0,0,0, 0) 75%) 100% center;
+        background: radial-gradient(left, ellipse, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, .8) 0%, rgba(0, 0, 0, 0) 75%) 100% center;
         background-size: 10px 100%, 10px 100%;
         background-attachment: scroll, scroll;
         background-repeat: no-repeat;
     }
 
-    td, th {
+    td, 
+    th {
         padding: 10px 20px;
         vertical-align: middle;
         border-right: 1px solid $white;
@@ -115,7 +114,7 @@
     td:first-child {
 
         @include breakpoint(1420) {
-            background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
             background-repeat: no-repeat;
             background-size: 20px 100%;
         }
@@ -125,7 +124,7 @@
     td:last-child {
 
         @include breakpoint(1420) {
-            background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+            background-image: linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
             background-repeat: no-repeat;
             background-position: 100% 0;
             background-size: 20px 100%;
